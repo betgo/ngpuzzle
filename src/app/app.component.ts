@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'puzzle';
+  times = Array(9).fill(1)
+  constructor(){
+    
+  }
 }
