@@ -1,12 +1,7 @@
 <div class="content">
-  <app-puzzle-item></app-puzzle-item>
-  <div class="container">
-    <app-puzzle-item class="item" *ngFor="let item of times ;let i=index" [id]="i" imag="https://th.wallhaven.cc/lg/96/96qy3w.jpg">{{i}}</app-puzzle-item>
-    <!-- <div *ngFor="let item of times ;let i=index" [ngStyle]="{'background-position-x':i*10+'px','background-position-y':i*10+'px'}" class="item" [draggable]="true">
-      {{i}}
-    </div> -->
-  </div>
-  <img class="puzzle" src="https://th.wallhaven.cc/lg/96/96qy3w.jpg" alt="">
+  <!-- <app-puzzle-item></app-puzzle-item> -->
+  <!-- <div style="width: 200px;height: 200px;background-color: red;" cdkDrag></div> -->
+  <app-puzzle></app-puzzle>
 
 
 </div>
