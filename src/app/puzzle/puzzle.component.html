@@ -1,3 +1,11 @@
 <div class="container">
+    <div class="left"></div>
     <app-puzzle-item  class="item" *ngFor="let item of times ;let i=index" [imgIndex]="item" [boxIndex]="i" [size]='size' imag="assets/img/test.jpg">{{i}}</app-puzzle-item>
 </div>
+    <div class="list" cdkDropList  >
+        <div class="list_item" >
+                 <div class="item" *ngFor="let item of times"  cdkDrag></div>
+        </div>
+
+    </div>
+

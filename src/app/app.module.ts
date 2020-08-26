@@ -6,11 +6,14 @@ import { PuzzleItemComponent } from './puzzle-item/puzzle-item.component';
 import { PuzzleComponent } from './puzzle/puzzle.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import {ScrollDirective} from '../core/Directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     PuzzleItemComponent,
     PuzzleComponent,
+    ScrollDirective
   ],
   imports: [
     BrowserModule,

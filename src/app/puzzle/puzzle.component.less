@@ -1,5 +1,31 @@
-.container{
-    width: 500px;
-    height: 500px;
-    position: relative;
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.left{
+    position: absolute;
+    left: -1;
+    width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+.list {
+  width: 500px;
+  height: 50px;
+  border: 1px solid black;
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden;
+  .list_item {
+    display: flex;
+    .item {
+      // flex: 1;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid red;
+      margin: 5px;
+    }
+  }
 }
