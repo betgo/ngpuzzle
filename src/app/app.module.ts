@@ -7,13 +7,15 @@ import { PuzzleComponent } from './puzzle/puzzle.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {ScrollDirective} from '../core/Directive';
+import { PuzzleItemCenterComponent } from './puzzle-item-center/puzzle-item-center.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PuzzleItemComponent,
     PuzzleComponent,
-    ScrollDirective
+    ScrollDirective,
+    PuzzleItemCenterComponent
   ],
   imports: [
     BrowserModule,

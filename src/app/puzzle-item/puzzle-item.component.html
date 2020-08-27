@@ -1,4 +1,10 @@
-<div class="item" cdkDrag (cdkDragEnded)="dragend($event)" (cdkDragStarted)="dragStart($event)" [cdkDragData]="data"
-  (mouseenter)="mouseEnter($event)" [ngStyle]="itemStyle" attr.data-boxIndex="{{boxIndex}}" #item>
-  <!-- <ng-content></ng-content> -->
+<div class="item" cdkDrag 
+(cdkDragEnded)="dragend($event)" (cdkDragStarted)="dragStart($event)"
+(mouseenter)="mouseEnter($event)"
+[style.opacity]="active? '1':'0'"
+[cdkDragData]="data"
+[cdkDragDisabled]="mode==='center' && active"
+   [ngStyle]="mode==='center'?centerStyle:listStyle"
+    attr.data-boxIndex="{{boxIndex}}" #item>
+  <ng-content></ng-content>
 </div>

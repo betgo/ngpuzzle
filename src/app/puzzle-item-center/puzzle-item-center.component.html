@@ -1,0 +1,7 @@
+<div class="item" 
+(mouseenter)="mouseEnter($event)"
+[style.opacity]="active? '1':'0'"
+   [ngStyle]="centerStyle"
+    attr.data-boxIndex="{{boxIndex}}" #item>
+  <ng-content></ng-content>
+</div>

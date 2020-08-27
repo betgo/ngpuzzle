@@ -1,11 +1,22 @@
 <div class="container">
-    <div class="left"></div>
-    <app-puzzle-item  class="item" *ngFor="let item of times ;let i=index" [imgIndex]="item" [boxIndex]="i" [size]='size' imag="assets/img/test.jpg">{{i}}</app-puzzle-item>
+    <div class="left" cdkDropList
+    [cdkDropListData] ="lists"
+    (cdkDropListDropped)="drop($event)"
+    >
+        <app-puzzle-item 
+          mode="list" class="item" *ngFor="let item of lists ;let i=index" 
+          [imgIndex]="item" [boxIndex]="i" [size]='size' [imag]="imageUrl"
+          [active]="true"
+          >
+            <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+           </app-puzzle-item>
+    </div>
+    <app-puzzle-item-center #puzzle  (selectedIndex)="handleSelected($event)" class="item" *ngFor="let item of items ;let i=index" [active]="item" [imgIndex]="i" [boxIndex]="i" [size]='size' [imag]="imageUrl"></app-puzzle-item-center>
 </div>
-    <div class="list" cdkDropList  >
+    <!-- <div class="list" cdkDropList  >
         <div class="list_item" >
                  <div class="item" *ngFor="let item of times"  cdkDrag></div>
         </div>
 
-    </div>
+    </div> -->
 
