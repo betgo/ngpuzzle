@@ -7,6 +7,9 @@ import { PuzzleItemCenterComponent } from '../puzzle-item-center/puzzle-item-cen
   templateUrl: './puzzle.component.html',
   styleUrls: ['./puzzle.component.less'],
   // changeDetection: ChangeDetectionStrategy.OnPush,
+  animations:[
+    
+  ]
 })
 export class PuzzleComponent implements OnInit {
 
@@ -15,8 +18,8 @@ export class PuzzleComponent implements OnInit {
   @Input()
   size = 3;
 
-  imageUrl = 'assets/img/test.jpg';
-  width = 500;
+  imageUrl = 'assets/img/3.jpg';
+  width = 600;
   height = 500;
 
   listStyle = {};
@@ -36,7 +39,7 @@ export class PuzzleComponent implements OnInit {
     this.items = new Array(6 * 6)
     this.times = randomArray(this.size); //打乱顺序
     this.init();
-    // this.cdr.detectChanges();
+
   }
   // 初始化
   init(): void {

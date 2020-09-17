@@ -6,12 +6,19 @@
         <app-puzzle-item 
           mode="list" class="item" *ngFor="let item of lists ;let i=index" 
           [imgIndex]="item" [boxIndex]="i" [size]='size' [imag]="imageUrl"
+          [height]="height"
+          [width]="width"
           [active]="true"
           >
             <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
            </app-puzzle-item>
     </div>
-    <app-puzzle-item-center #puzzle  (selectedIndex)="handleSelected($event)" class="item" *ngFor="let item of items ;let i=index" [active]="item" [imgIndex]="i" [boxIndex]="i" [size]='size' [imag]="imageUrl"></app-puzzle-item-center>
+    <app-puzzle-item-center #puzzle
+      (selectedIndex)="handleSelected($event)"
+       class="item" *ngFor="let item of items ;let i=index"
+       [height]="height"
+       [width]="width"
+        [active]="item" [imgIndex]="i" [boxIndex]="i" [size]='size' [imag]="imageUrl"></app-puzzle-item-center>
 </div>
     <!-- <div class="list" cdkDropList  >
         <div class="list_item" >

@@ -46,7 +46,7 @@ export class PuzzleItemComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     this.centerStyle = {
       width: this.width / this.size + 'px',
-      height: this.width / this.size + 'px',
+      height: this.height / this.size + 'px',
       left: this.width / this.size * (this.boxIndex % this.size) + 'px',
       top: this.height / this.size * (Math.floor(this.boxIndex / this.size)) + 'px',
       backgroundImage: `url(${this.imag}) `,
@@ -58,7 +58,7 @@ export class PuzzleItemComponent implements OnInit, AfterViewInit {
     };
     this.listStyle = {
       width: this.width / this.size + 'px',
-      height: this.width / this.size + 'px',
+      height: this.height / this.size + 'px',
       backgroundImage: `url(${this.imag}) `,
       backgroundPositionX: `${-this.width / this.size * (this.imgIndex % this.size)}px`,
       backgroundPositionY: `${-this.height / this.size * (Math.floor(this.imgIndex / this.size))}px`,

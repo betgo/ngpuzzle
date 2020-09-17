@@ -38,7 +38,7 @@ export class PuzzleItemCenterComponent implements OnInit {
   ngAfterViewInit(): void {
     this.centerStyle = {
       width: this.width / this.size + 'px',
-      height: this.width / this.size + 'px',
+      height: this.height / this.size + 'px',
       left: this.width / this.size * (this.boxIndex % this.size) + 'px',
       top: this.height / this.size * (Math.floor(this.boxIndex / this.size)) + 'px',
       backgroundImage: `url(${this.imag}) `,
